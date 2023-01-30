@@ -1,0 +1,11 @@
+{
+    "env":{
+        "DB": {
+            "user": "medunna_user",
+            "host": "medunna.com",
+            "database": "medunna_db",
+            "password": "medunna_pass_987",
+            "port": 5432
+        }    
+}
+}

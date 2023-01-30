@@ -1,0 +1,37 @@
+Yeni proje olusturduk
+terminale nmp init -y 
+
+
+1) npm i cypress@9.7.0 
+
+2) POSTGRESQL PLUGIN
+    npm install --save-dev pg
+
+
+3) index.js'e DOSYASINA EKLE
+
+const pg = require('pg')
+// Database bağlanır ve sorgu sonucunu getirir
+on("task", {
+  DATABASE ({ dbConfig, sql, values }) {
+    const pool = new pg.Pool(dbConfig);
+    try {
+        return pool.query(sql, values)
+    } catch (e) {
+    }
+  }
+})
+
+4) cypress.json'a EKLE
+
+{
+    "env":{
+        "DB": {
+            "user": "medunna_user",
+            "host": "medunna.com",
+            "database": "medunna_db",
+            "password": "medunna_pass_987",
+            "port": 5432
+        }    
+}
+}
